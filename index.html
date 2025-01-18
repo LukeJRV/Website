@@ -22,7 +22,7 @@ Version 1.0.0 / / /
 <!-- Style Sheet --> 
   <link rel="stylesheet" href="style.css" />
 
-  <body class="body">
+<body class="body">
   <div id="loader"></div>
   <noscript>JavaScript Switch</noscript>
     
@@ -66,8 +66,9 @@ Version 1.0.0 / / /
 
 <!-- Cursor Script -->
 <script>
-const cursorInner = document.getElementById("cursor-inner-outline");
-const cusrsorOuter = document.getElementById("cursor-outer-outline);
+const cursorInnerOutline = document.getElementById("cursor-outline");
+const cusrsorOuterOutline = document.getElementById("cursor-out-outline");
+const links = document.querySelectorAll("a,label,button");
 
 document.addEventListener("mousemove", function (e) {
       const posX = e.clientX;
