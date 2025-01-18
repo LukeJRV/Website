@@ -113,36 +113,38 @@ Version 1.0.0 / / /
 
 <!-- Cursor Script -->
 <script>
-const cursorInnerOutline = document.getElementById("cursor-outline");
-const cusrsorOuterOutline = document.getElementById("cursor-out-outline");
-const links = document.querySelectorAll("a,label,button");
+document.addEventListener("DOMContentLoaded", function() {
+  const cursorInnerOutline = document.getElementById("cursor-outline");
+  const cursorOuterOutline = document.getElementById("cursor-out-outline");
+  const links = document.querySelectorAll("a, label, button");
 
-document.addEventListener("mousemove", function (e) {
-      const posX = e.clientX;
-      const posY = e.clientY;
+  document.addEventListener("mousemove", function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
 
-      cursorInnerOutline.style.left = `${posX}px`;
-      cursorInnerOutline.style.top = `${posY}px`;
+    cursorInnerOutline.style.left = `${posX}px`;
+    cursorInnerOutline.style.top = `${posY}px`;
 
-cursorOuterOutline.animate(
-        {
-          left: `${posX}px`,
-          top: `${posY}px`,
-        },
-        { duration: 500, fill: "forwards" }
-      );
+    cursorOuterOutline.animate(
+      {
+        left: `${posX}px`,
+        top: `${posY}px`,
+      },
+      { duration: 500, fill: "forwards" }
+    );
+  });
 
   links.forEach((link) => {
-        link.addEventListener("mouseenter", () => {
-          cursorInnerOutline.classList.add("hover");
-          cursorOuterOutline.classList.add("hover");
-        });
-        link.addEventListener("mouseleave", () => {
-          cursorInnerOutline.classList.remove("hover");
-          cursorOuterOutline.classList.remove("hover");
-        });
-      });
+    link.addEventListener("mouseenter", () => {
+      cursorInnerOutline.classList.add("hover");
+      cursorOuterOutline.classList.add("hover");
     });
+    link.addEventListener("mouseleave", () => {
+      cursorInnerOutline.classList.remove("hover");
+      cursorOuterOutline.classList.remove("hover");
+    });
+  });
+});
   </script>
 </body>
 </html>
