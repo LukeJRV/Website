@@ -1,1 +1,42 @@
+#loader,
+.invertapplied,
+.invertsettinglabel 
+{
+  filter: invert(1)
+}
 
+#loader, noscript 
+{
+    width: 100%;
+    height: 100%
+}
+
+body, noscript 
+{
+    background-color: var(--color-dark-mode)
+}
+
+.cursor-outline 
+{
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-light-blue)
+}
+
+.cursor-out-outline 
+{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff
+}
+
+.cursor-inner, .cursor-outer 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none
+}
