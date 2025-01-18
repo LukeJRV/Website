@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="english">
+<!--
+
+██      ██    ██ ██   ██ ███████      ██ ██████  ██    ██ 
+██      ██    ██ ██  ██  ██           ██ ██   ██ ██    ██ 
+██      ██    ██ █████   █████        ██ ██████  ██    ██ 
+██      ██    ██ ██  ██  ██      ██   ██ ██   ██  ██  ██  
+███████  ██████  ██   ██ ███████  █████  ██   ██   ████   
+Version 1.0.0 / / / 
+-->                                                      
+
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#000"/>
+<meta name="description"
+  content="LukeJRV | Welcome to my Website"/>
+<meta name="author" content="Luke Vizor"/>
+
+<!-- Cursor Outline / Outer-Outline -->
+<header>
+<div class="cursor-outline" id="cursor-outline"></div>
+  <div class="cursor-out-outline" id="cursor-out-outline"></div>
+
+  <!-- Navbar -->
+      <div class="navbar" id="navbar">
+    <div class="welcome">Welcome</div>
+  </div>
+</div>
+
+<!-- Navbar Tabs -->
+<div class="navbar-tabs" id="navbar-tabs">
+  <ul class="navbar-tabs-ul">
+    <li class="home activateTab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+      <a href="#home" tabindex="0" aria-label="Home menu button">
+              &#60;/Home&#62;
+            </a>
+          </li>
+
+<li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+            <a href="#about" aria-label="About menu button">
+              &#60;/AboutMe&#62;
+            </a>
+          </li>
+
+<li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+            <a href="#skills" aria-label="Skills menu button">
+              &#60;/Skills&#62;
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- End of Navigation Bar -->
+
+<!-- Cursor Script -->
+<script>
+const cursorInner = document.getElementById("cursor-inner-outline");
+const cusrsorOuter = document.getElementById("cursor-outer-outline);
+
+document.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorInnerOutline.style.left = `${posX}px`;
+      cursorInnerOutline.style.top = `${posY}px`;
+
+cursorOuterOutline.animate(
+        {
+          left: `${posX}px`,
+          top: `${posY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+      );
+
+  links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          cursorInnerOutline.classList.add("hover");
+          cursorOuterOutline.classList.add("hover");
+        });
+        link.addEventListener("mouseleave", () => {
+          cursorInnerOutline.classList.remove("hover");
+          cursorOuterOutline.classList.remove("hover");
+        });
+      });
+    });
+  </script>
+</head>
