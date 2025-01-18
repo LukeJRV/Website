@@ -72,9 +72,9 @@ font-size: 10px;
     background-color: red;
     width: 100%;
 } 
-        
 </style>
 </head>
+
 <body>
     <div class="loader-container">
         <div class="text-content">
@@ -83,25 +83,9 @@ font-size: 10px;
         </div>
     </div>
 </body>
-<script>
-  slider.value = 0;
 
-    setInterval(() => {
-        slider.value++;
-        display.innerText = slider.value +'%';
- 
-        function blah(){
-            if (slider.value == 100) {
-            display.style.backgroundColor = 'red';
-        }
-        else{
-            display.style.color = "white"    
-        }
-    }
-        
-    }, 10 );
+<script>
+  const slider = document.getElementById('slider');
+  const display = document.getElementById('display');
 </script>
 </html>
-  
-
-
