@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Loader</title>
+    <style>
+
+X {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+font-size: 10px;
+    scroll-behavior: smooth; 
+    text-rendering: auto; 
+    -webkit-font-smoothing: antialiased;
+}
+
+:root{
+    font-family: Roboto, Arial;
+    cursor:default;
+    --color-white: #fff;
+    --color-gray: #c4c4c4;
+    --color-black: #000;
+    --color-purple: #8000ff;
+    --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
+}
+
+.loader-container
+      {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+.p1
+    {
+    color: black;
+    animation: textshow 4s infinite;
+    }
+    
+    @keyframes textshow 
+    {
+      0% 
+    {
+      color:white;
+    }
+}
+      
+.toggle-show-menu
+{
+  display: flex;
+}
+  @keyframes dropdownlist {
+      0%
+    {
+      transform: translate(400px);
+    }
+}
+  
+
+
