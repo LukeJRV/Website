@@ -1,3 +1,17 @@
+#labelforsetting,
+#labelforvisualmode,
+#switchforvisualmode:checked+#labelforvisualmode 
+{
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+#labelforsetting,
+#labelforsound {
+    height: 40px;
+    background-size: 60%
+}
+
 #loader,
 .invertapplied,
 .invertsettinglabel 
@@ -17,7 +31,8 @@ body, noscript
 }
 
 .main,
-body {
+body 
+{
     overflow-x: hidden
 }
 
@@ -45,7 +60,7 @@ footer
     text-decoration: none
 }
 
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -289,7 +304,8 @@ noscript
     font-weight: 100
 }
 
-.welcome {
+.welcome 
+{
     color: #fff;
     position: absolute;
     font-size: 2.5rem;
@@ -310,6 +326,27 @@ noscript
 
 .popup {
     animation: 3s linear pop-up
+}
+
+@keyframes pop-up {
+    from {
+        bottom: -50px;
+        left: 50px;
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.face {
+    height: 74%;
+    bottom: 0;
+    justify-content: center;
+    gap: 5px;
+    z-index: 1;
+    padding-left: 1px
 }
 
 .eye 
@@ -344,4 +381,28 @@ noscript
     width: 100%;
     height: fit-content;
     position: relative
+}
+
+.blob 
+{
+    position: absolute;
+    right: -15%;
+    top: 0;
+    background-color: var(--color-light-purple);
+    width: 600px;
+    height: 100vh;
+    filter: blur(300px);
+    opacity: .3;
+    animation: 1s linear infinite alternate-reverse breath
+}
+
+@keyframes breath 
+{
+    from {
+        opacity: .3
+    }
+
+    to {
+        opacity: .5
+    }
 }
