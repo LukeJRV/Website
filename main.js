@@ -1,7 +1,7 @@
 var loader = document.getElementById("loader");
 window.addEventListener("load", function() {
     loader.style.display = "none";
-    document.querySelector(".hey").classList.add("popup");
+    document.querySelector(".welcome").classList.add("popup");
 });
 
 function visualmode() {
