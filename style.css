@@ -30,7 +30,7 @@ body, noscript
     border: 2px solid #fff
 }
 
-.cursor-inner, .cursor-outer 
+.cursor-outline, .cursor-out-outline 
 {
     position: fixed;
     top: 0;
